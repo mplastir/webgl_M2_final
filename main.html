@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<title>WebGL - Canvas test</title>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!------------------------------------------------------------------->
+	<script type="text/javascript" src="glMatrix.js"></script>
+	<script type="text/javascript" src="callbacks.js"></script>
+	<script type="text/javascript" src="glCourseBasis.js"></script>
+	<script type="text/javascript" src="Fonctions.js"></script>
+<!------------------------------------------------------------------->
+
+</head>
+
+
+<body onload="webGLStart();">
+	<table><td>
+		<canvas id="WebGL-test" style="border:none;" width="600" height="600"></canvas>
+		<br><br>
+		<button type="button" onclick="loadShaders('shader')">Load Shaders</button>
+		</td>
+		<td>
+		<div>Seuillage <br>
+		<input class="slider" type="range" id="seuilValue" min="0.0" max="1.0" step="0.01" value="0.0" oninput="setSeuil(this.value)" class="slider"></div>
+		
+		<div>Coupe<br>
+		<input class="slider" type="range" id="nValue" min="0" max="361" step="1" value="361" oninput="setN(this.value)" class="slider" ></div>
+
+		<div>Transparence<br>
+		<input class="slider" type="range" id="alphaValue" min="0.0" max="1.0" step="0.1" value="0.5" oninput="setAlpha(this.value)" class="slider" ></div>
+		<br>
+		<br>
+		<div>
+			<input type="radio" id="3D" name="affichage" value="Choix" oninput="setChoix()" checked = true>
+			<label for="3D">3D</label>
+			<input type="radio" id="2D" name="affichage" value="Choix2" oninput="setChoix()" unchecked = true>
+			<label for="2D">2D</label>
+		</div>
+		<br>
+		<div>
+			<input type="radio" id="Fausses couleurs" name="col" value="col1" oninput="setCol()" checked = true>
+			<label for="Fausses couleurs">Fausses couleurs</label>
+			<input type="radio" id="Niveau de gris" name="col" value="col2" oninput="setCol()" unchecked = true>
+			<label for="Niveau de gris">Niveau de Gris</label>
+		</div>
+
+		<br>
+		<br>
+
+		<label>Couleur 1</label>
+		<input type="color" id="col1" value="#01E501" oninput="setCol1()">
+		<br></br>
+		<label>Couleur 2</label>
+		<input type="color" id="col2" value="#01E5E5" oninput="setCol2()">
+		<br></br>
+		<label>Couleur 3</label>
+		<input type="color" id="col3" value="#0101E5" oninput="setCol3()">
+		<br></br>
+		<label>Couleur 4</label>
+		<input type="color" id="col4" value="#E501E5" oninput="setCol4()">
+		<br></br>
+		<label>Couleur 5</label>
+		<input type="color" id="col5" value="#E50101" oninput="setCol5()">
+	</td>
+
+
+
+</table>
+	
+    
+
+</body>
+
+
+
+
+</html>
